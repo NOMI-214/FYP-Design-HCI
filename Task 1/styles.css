@@ -1,0 +1,321 @@
+/* === GLOBAL RESET === */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: linear-gradient(145deg, #0b0f1a, #111a2e);
+  color: #fff;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+}
+
+/* === STICKY TOP NAVBAR === */
+.top-card {
+  width: 100%;
+  background: #0f1528;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 3rem;
+  box-shadow: 0 2px 15px rgba(0, 255, 255, 0.08);
+  border-bottom: 1px solid rgba(0, 255, 255, 0.1);
+
+  /* Sticky behavior */
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  backdrop-filter: blur(8px);
+}
+
+.top-left {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.logo-img.small {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+}
+
+.car-name {
+  font-weight: 600;
+  font-size: 1.2rem;
+}
+
+.connected {
+  color: #00ff9d;
+  font-size: 0.95rem;
+  font-weight: 500;
+  margin-left: 1.5rem;
+  display: flex;
+  align-items: center;
+}
+
+.connected .dot {
+  height: 10px;
+  width: 10px;
+  background: #00ff9d;
+  border-radius: 50%;
+  display: inline-block;
+  margin-right: 8px;
+}
+
+.top-right {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  color: #aaa;
+  font-size: 1.2rem;
+}
+
+/* === MAIN CONTENT === */
+.content {
+  flex: 1;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(420px, 1fr));
+  gap: 2rem;
+  padding: 2.5rem 3rem;
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+/* === CARD BASE === */
+.card {
+  background: #111a2e;
+  border-radius: 20px;
+  padding: 1.8rem;
+  box-shadow: 0 0 25px rgba(0, 255, 255, 0.05);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 0 30px rgba(0, 255, 255, 0.15);
+}
+
+.card-header {
+  font-weight: 600;
+  font-size: 1.15rem;
+  margin-bottom: 1.2rem;
+  border-bottom: 1px solid rgba(0, 255, 255, 0.1);
+  padding-bottom: 0.6rem;
+}
+
+/* === VEHICLE STATUS === */
+.vehicle-status .vs-grid {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.health {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+  min-width: 200px;
+}
+
+.gauge {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background: conic-gradient(#00e0ff 0deg 330deg, #0d1423 330deg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 0.8rem;
+  box-shadow: 0 0 20px rgba(0, 224, 255, 0.3);
+}
+
+.gauge-inner {
+  background: #0d1423;
+  border-radius: 50%;
+  width: 85px;
+  height: 85px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #00e0ff;
+  font-weight: 600;
+  font-size: 1.2rem;
+}
+
+.small-metrics {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1.3rem;
+  flex: 1;
+  min-width: 180px;
+}
+
+.metric {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.metric-icon {
+  font-size: 1.4rem;
+  color: #00e0ff;
+}
+
+.metric-val {
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.metric-label {
+  font-size: 0.85rem;
+  color: #aaa;
+}
+
+.status-pill {
+  text-align: center;
+  margin-top: 2rem;
+  background: rgba(0, 255, 128, 0.1);
+  color: #00ff9d;
+  border: 1px solid #00ff9d;
+  border-radius: 25px;
+  padding: 0.7rem 0;
+  font-size: 0.9rem;
+  font-weight: 500;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* === TELEMETRY === */
+.telemetry .tele-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2.2rem;
+  justify-items: center;
+}
+
+.tele-item {
+  text-align: center;
+}
+
+.tele-gauge {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background: #0d1423;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.tele-inner {
+  position: relative;
+  z-index: 1;
+  font-weight: 600;
+  font-size: 1.1rem;
+  line-height: 1.3;
+}
+
+.tele-gauge.speed::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  background: conic-gradient(#00e0ff 0deg 270deg, #0d1423 270deg);
+}
+
+.tele-gauge.rpm::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  background: conic-gradient(#00ff88 0deg 270deg, #0d1423 270deg);
+}
+
+.tele-gauge.temp::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  background: conic-gradient(#ffaa00 0deg 270deg, #0d1423 270deg);
+}
+
+.tele-gauge.load::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  background: conic-gradient(#ff3c3c 0deg 270deg, #0d1423 270deg);
+}
+
+.tele-label {
+  margin-top: 0.8rem;
+  color: #aaa;
+  font-size: 0.9rem;
+}
+
+/* === FOOTER NAV === */
+.bottom-nav {
+  background: #0f1528;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4rem;
+  padding: 1.2rem 0;
+  border-top: 1px solid rgba(0, 255, 255, 0.1);
+  position: sticky;
+  bottom: 0;
+  z-index: 900;
+}
+
+.nav-item {
+  text-decoration: none;
+  color: #aaa;
+  text-align: center;
+  font-size: 0.9rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.4rem;
+  transition: color 0.3s;
+}
+
+.nav-item:hover {
+  color: #00e0ff;
+}
+
+.nav-item i {
+  font-size: 1.4rem;
+}
+
+.nav-item.active {
+  color: #00e0ff;
+}
+
+.center-action {
+  background: #00e0ff;
+  color: #0d1423;
+  width: 60px;
+  height: 60px;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 0 25px #00e0ff;
+  font-size: 1.5rem;
+}
+.center-action:hover {
+  background: #00c4e0;
+}

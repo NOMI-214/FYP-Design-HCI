@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>DriveIntel — Component Health</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <div class="phone">
+    <header class="topbar">
+      <div class="left-header">
+        <div class="logo">
+          <img src="images/logo.png" alt="DriveIntel logo" class="logo-img">
+          <div class="logo-text">DriveIntel</div>
+        </div>
+        <div class="car-info">
+          <div class="car-name">BMW X5 2022</div>
+          <div class="status">• OBD-II Connected</div>
+        </div>
+      </div>
+      <div class="top-icons">
+        <i class="fa-solid fa-wifi"></i>
+        <i class="fa-regular fa-bell"></i>
+      </div>
+    </header>
+
+    <main class="content">
+      <div class="left-col">
+      <section class="card">
+        <div class="card-header">Component Health</div>
+        <div class="comp-list">
+          <div class="comp-row"><div class="comp-name">Engine</div><div class="comp-val">92%</div></div>
+          <div class="comp-row"><div class="comp-name">Transmission</div><div class="comp-val">89%</div></div>
+          <div class="comp-row"><div class="comp-name">Brakes</div><div class="comp-val">88%</div></div>
+          <div class="comp-row"><div class="comp-name">Battery</div><div class="comp-val">85%</div></div>
+        </div>
+      </section>
+      </div>
+
+      <aside class="right-col">
+        <section class="card">
+          <div class="card-header">Details</div>
+          <p class="muted">Select a component to view more diagnostics and history.</p>
+        </section>
+      </aside>
+
+    </main>
+
+    <nav class="bottom-nav">
+      <a class="nav-item" href="index.html">
+        <i class="fa-solid fa-th-large"></i>
+        <span>Dashboard</span>
+      </a>
+      <a class="nav-item" href="diagnostics.html">
+        <i class="fa-solid fa-heart-pulse"></i>
+        <span>Diagnostics</span>
+      </a>
+      <a class="nav-item" href="maintenance.html">
+        <i class="fa-solid fa-wrench"></i>
+        <span>Maintenance</span>
+      </a>
+      <a class="nav-item" href="more.html">
+        <i class="fa-solid fa-ellipsis"></i>
+        <span>More</span>
+      </a>
+    </nav>
+  </div>
+</body>
+</html>

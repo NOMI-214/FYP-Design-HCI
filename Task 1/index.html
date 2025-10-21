@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>DriveIntel — Dashboard</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <div class="phone">
+    <div class="top-card">
+      <div class="top-left">
+        <img src="./Images/LOGO.jpg" alt="DriveIntel" class="logo-img small">
+        <div class="car-name">BMW X5 2022</div>
+      </div>
+      <div class="top-right">
+        <i class="fa-solid fa-wifi"></i>
+        <i class="fa-regular fa-bell"></i>
+        <i class="fa-solid fa-gear"></i>
+      </div>
+      <div class="connected"> <span class="dot"></span> OBD-II Connected</div>
+    </div>
+
+    <main class="content">
+      <div class="left-col">
+      <section class="card vehicle-status">
+        <div class="card-header">Vehicle Status</div>
+        <div class="vs-grid">
+          <div class="health">
+            <div class="gauge">
+              <div class="gauge-inner">92<span class="percent">%</span></div>
+            </div>
+            <div class="label">Health Score</div>
+          </div>
+
+          <div class="small-metrics">
+            <div class="metric fuel">
+              <div class="metric-icon"> <i class="fa-solid fa-droplet"></i> </div>
+              <div class="metric-val">68%</div>
+              <div class="metric-label">Fuel Level</div>
+            </div>
+
+            <div class="metric batt">
+              <div class="metric-icon"> <i class="fa-solid fa-battery-three-quarters"></i></div>
+              <div class="metric-val">12.6V</div>
+              <div class="metric-label">Battery</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="status-pill"> <i class="fa-solid fa-check-circle"></i> All Systems Healthy</div>
+      </section>
+
+      <section class="card telemetry">
+        <div class="card-header">Real-Time Telemetry</div>
+        <div class="tele-grid">
+          <div class="tele-item">
+            <div class="tele-gauge speed">
+              <div class="tele-inner">45<br><span class="unit">km/h</span></div>
+            </div>
+            <div class="tele-label">Speed</div>
+          </div>
+
+          <div class="tele-item">
+            <div class="tele-gauge rpm">
+              <div class="tele-inner">1<br><span class="unit">x1000</span></div>
+            </div>
+            <div class="tele-label">Engine RPM</div>
+          </div>
+
+          <div class="tele-item">
+            <div class="tele-gauge temp">
+              <div class="tele-inner">83<br><span class="unit">°C</span></div>
+            </div>
+            <div class="tele-label">Temperature</div>
+          </div>
+
+          <div class="tele-item">
+            <div class="tele-gauge load">
+              <div class="tele-inner">37<br><span class="unit">%</span></div>
+            </div>
+            <div class="tele-label">Engine Load</div>
+          </div>
+        </div>
+      </section>
+
+      <aside class="right-col">
+        <section class="card">
+          <div class="card-header">Component Health</div>
+          <div class="comp-list">
+            <div class="comp-row"><div class="comp-name">Engine</div><div class="comp-val">92%</div></div>
+            <div class="comp-row"><div class="comp-name">Brakes</div><div class="comp-val">88%</div></div>
+            <div class="comp-row"><div class="comp-name">Battery</div><div class="comp-val">85%</div></div>
+          </div>
+        </section>
+      </aside>
+
+    </main>
+
+    <nav class="bottom-nav">
+      <a class="nav-item active" href="index.html">
+        <i class="fa-solid fa-th-large"></i>
+        <span>Dashboard</span>
+      </a>
+      <a class="nav-item" href="diagnostics.html">
+        <i class="fa-solid fa-heart-pulse"></i>
+        <span>Diagnostics</span>
+      </a>
+      <a class="center-action" href="#" aria-label="central">
+        <i class="fa-solid fa-cube"></i>
+      </a>
+      <a class="nav-item" href="maintenance.html">
+        <i class="fa-solid fa-wrench"></i>
+        <span>Maintenance</span>
+      </a>
+      <a class="nav-item" href="more.html">
+        <i class="fa-solid fa-ellipsis"></i>
+        <span>More</span>
+      </a>
+    </nav>
+  </div>
+</body>
+</html>
